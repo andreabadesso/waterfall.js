@@ -1,20 +1,20 @@
 var grunt = require('grunt');
 
 grunt.initConfig({
-   uglify: {
-      my_target: {
-         files: {
-            'waterfall.min.js': ['src/**/*.js']
-         }
-      }
-   },
+    uglify: {
+        my_target: {
+            files: {
+                'waterfall.min.js': ['src/**/*.js']
+            }
+        }
+    },
 
-   watch: {
-      dist: {
-         files: ['src/**/*.js'], 
-	      tasks: ['uglify']
-      }
-   }
+    watch: {
+        dist: {
+            files: ['src/**/*.js'],
+            tasks: ['uglify']
+        }
+    }
 });
 
 grunt.loadNpmTasks('grunt-contrib-uglify');
