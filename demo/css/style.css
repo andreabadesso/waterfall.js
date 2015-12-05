@@ -1,0 +1,23 @@
+.grid {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.item {
+    background-color: red;
+    margin: 10px;
+}
+
+.item-p {
+    width: 150px;
+    height: 150px;
+}
+
+.item-m {
+    width: 250px;
+    height: 250px;
+}
+
+.item-g {
+    width: 500px;
+    height: 500px;
+}
