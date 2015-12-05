@@ -39,7 +39,9 @@ function waterfall(container) {
             el = els[i],
             thereIsSpace = domutil.right(prev) + domutil.width(el) <= domutil.width(container);
 
-        if (!thereIsSpace) break;
+        if (!thereIsSpace) {
+            break;
+        }
 
         el.style.top = prev.style.top;
         el.style.left = px(domutil.right(prev) + domutil.margin('Left', el));
@@ -50,8 +52,10 @@ function waterfall(container) {
     // Place following elements at the bottom of the smallest column.
     for (; i < els.length; i++) {
         domutil.sort(boundary);
+
         var el = els[i],
             minEl = boundary.pop();
+
         el.style.top = px(domutil.bottom(minEl) + domutil.margin('Top', el));
         el.style.left = px(domutil.x(minEl));
         boundary.push(el);

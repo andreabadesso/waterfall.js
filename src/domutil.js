@@ -33,8 +33,8 @@ domutil.sort = function (l) {
     l = l.sort(function(a, b) {
         if (this.bottom(a) === this.bottom(b)) {
             return this.x(b) - this.x(a);
-        } else {
-            return this.bottom(b) - this.bottom(a);
         }
+
+        return this.bottom(b) - this.bottom(a);
     }.bind(this));
 };
